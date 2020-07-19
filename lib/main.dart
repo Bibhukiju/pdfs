@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
-
-import 'pdfpage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -54,13 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   title = "Old";
                   subjects = "assets/pdfs/ca.pdf";
                 });
-                var route = new MaterialPageRoute(
-                  builder: (BuildContext context) => NextPage(
-                    value: title,
-                    subjects: subjects,
-                  ),
-                );
-                Navigator.of(context).push(route);
               },
             ),
           ),
@@ -72,16 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    title="DSA";
-                    subjects="assets/pdfs/nmold.pdf";
+                    title = "DSA";
+                    subjects = "assets/pdfs/nmold.pdf";
                   });
-                  var route = new MaterialPageRoute(
-                    builder: (BuildContext context) => NextPage(
-                      value: title,
-                      subjects: subjects,
-                    ),
-                  );
-                  Navigator.of(context).push(route);
                 },
                 child: Container(
                   child: Column(

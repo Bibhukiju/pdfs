@@ -4,16 +4,16 @@
 
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<flutter_plugin_pdf_viewer/FlutterPluginPdfViewerPlugin.h>)
-#import <flutter_plugin_pdf_viewer/FlutterPluginPdfViewerPlugin.h>
-#else
-@import flutter_plugin_pdf_viewer;
-#endif
-
 #if __has_include(<path_provider/FLTPathProviderPlugin.h>)
 #import <path_provider/FLTPathProviderPlugin.h>
 #else
 @import path_provider;
+#endif
+
+#if __has_include(<pdf_flutter/PdfFlutterPlugin.h>)
+#import <pdf_flutter/PdfFlutterPlugin.h>
+#else
+@import pdf_flutter;
 #endif
 
 #if __has_include(<sqflite/SqflitePlugin.h>)
@@ -25,8 +25,8 @@
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
-  [FlutterPluginPdfViewerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterPluginPdfViewerPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
+  [PdfFlutterPlugin registerWithRegistrar:[registry registrarForPlugin:@"PdfFlutterPlugin"]];
   [SqflitePlugin registerWithRegistrar:[registry registrarForPlugin:@"SqflitePlugin"]];
 }
 
